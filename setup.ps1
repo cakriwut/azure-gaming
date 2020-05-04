@@ -39,6 +39,8 @@ Join-Network $network
 Install-NSSM
 
 Install-StreamTools
+Disable-ServerManager
+Disable-InternetExplorerESC
 
 if ($use_azure_nvidia_ext -eq $false) {
     Install-NvidiaDriver $manual_install
