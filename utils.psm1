@@ -229,3 +229,12 @@ function Add-AutoLogin ($admin_username, $admin_password) {
     Set-ItemProperty $registry "DefaultUsername" -Value $admin_username -type String
     Set-ItemProperty $registry "DefaultPassword" -Value $admin_password -type String
 }
+
+function Install-StreamTools {
+    Write-Output "Installing OBS Studio"
+    choco install obs-studio --force
+    Write-Output "Installing Skype"
+    choco install skype
+    Write-Output "Installing TeamViewer"
+    choco install teamviewer
+}
